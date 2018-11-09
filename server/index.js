@@ -15,6 +15,11 @@ app.use(cors())
 // Tell express app to use bodyParser.json() for API endpoints
 app.use(bodyParser.json())
 
+// Link to DB
+massive(process.env.CONNECTION_STRING).then(dbInstance => {
+    app.set('db', dbInstance)
+}).catch(err => console.log(err));
+
 // Tell the app to start listening on port 3005
 const port = process.env.PORT || 3005
 app.listen(port, () => { console.log(`Server listening on port ${port}`) });
