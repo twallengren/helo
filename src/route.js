@@ -12,10 +12,10 @@ class Routes extends Component {
         return (
             <div>
                 <Switch>
-                    <Route path="/" component={(props) => { return <Auth setRoute={this.props.setRoute} routeProps={props} currentRoute={this.props.currentRoute} /> }} exact />
-                    <Route path="/dashboard" component={(props) => { return <Dashboard setRoute={this.props.setRoute} routeProps={props} currentRoute={this.props.currentRoute} /> }} />
-                    <Route path="/post/:postid" component={(props) => { return <Post setRoute={this.props.setRoute} routeProps={props} currentRoute={this.props.currentRoute} /> }} />
-                    <Route path="/new" component={(props) => { return <Form setRoute={this.props.setRoute} routeProps={props} currentRoute={this.props.currentRoute} /> }} />
+                    <Route path="/" component={(props) => { return <Auth routeProps={props} /> }} exact />
+                    <Route path="/dashboard" component={(props) => { return <Dashboard routeProps={props} /> }} />
+                    <Route path="/post/:postid" component={(props) => { return <Post routeProps={props} /> }} />
+                    <Route path="/new" component={(props) => { return <Form routeProps={props} /> }} />
                 </Switch>
             </div>
         )

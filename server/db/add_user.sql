@@ -1,0 +1,1 @@
+INSERT INTO users (username, secret) VALUES ($1, $2);
